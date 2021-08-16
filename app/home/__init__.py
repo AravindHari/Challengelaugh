@@ -4,7 +4,7 @@ import random
 import pickle
 import sys
 data=[]
-home=Blueprint('home',__name__,template_folder="templates",static_folder="static",static_url_path='static')
+home=Blueprint('home',__name__,template_folder="templates",static_folder="static")
 
 @home.route('/')
 @home.route('/home')
