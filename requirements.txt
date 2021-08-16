@@ -28,6 +28,7 @@ python-dateutil
 python-editor
 python-engineio==3.13.2
 python-socketio==4.6.0
+pytest-flask
 retrying
 six
 SQLAlchemy

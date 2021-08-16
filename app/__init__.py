@@ -1,15 +1,13 @@
 from flask import Flask
 from flask_socketio import SocketIO
-from flask_cors import CORS
 import config
-
-app=Flask(__name__)
-
-app.config.from_object(config)
+from app.game import socketio
+from app.home import home
 
 
-cors=CORS(app)
-
-socketio=SocketIO(app)
-
-from app import routes
+def create_app(test_config: dict=None)->Flask:
+    app=Flask(__name__,static_folder=None)
+    app.config.from_object(config)
+    app.register_blueprint(home,url_prefix='')
+    socketio.init_app(app)
+    return app
