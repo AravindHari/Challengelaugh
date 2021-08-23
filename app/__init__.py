@@ -10,5 +10,4 @@ db=MongoEngine()
 db.init_app(app)
 socketio=SocketIO()
 socketio.init_app(app)
-
 from app import routes,events

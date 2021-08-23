@@ -7,6 +7,9 @@
     <title>Enter Name</title>
 </head>
 <body>
+    {% if message %}
+    <h4 style="color: red;">{{message}}</h4>
+    {%endif%}
     <form method='POST'>
         <input type="text" value="" placeholder="username" name='username'>
         <input type="submit" value="">
