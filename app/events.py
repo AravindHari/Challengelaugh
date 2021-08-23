@@ -1,7 +1,5 @@
-from app.home import data
-from flask_socketio import SocketIO
-
-socketio=SocketIO()
+from app.routes import data
+from app import socketio
 
 
 #Events
@@ -13,6 +11,3 @@ def test_connect():
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: '+ str(json))
     data.append(json)
-
-
-
